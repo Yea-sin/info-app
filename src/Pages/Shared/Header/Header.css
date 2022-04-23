@@ -1,0 +1,34 @@
+.logo {
+  animation-name: logoAnime;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: all 0.45s linear;
+}
+
+@keyframes logoAnime {
+  0% {
+    transform: scale(1.5);
+    color: #ffff;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.nav-bg {
+  background-color: cadetblue;
+  padding: 20px;
+}
+.menu-items {
+  margin: 0 auto;
+}
+.menu-items a {
+  font-size: 20px;
+  font-family: monospace;
+  margin-right: 30px;
+  border-bottom: 2px solid #fff;
+}
+.menu-items a:hover {
+  color: white;
+  border-bottom: 2px solid #000;
+}
