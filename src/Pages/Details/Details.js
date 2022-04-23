@@ -1,15 +1,15 @@
 import { React, useState, useEffect } from "react";
-import { Container, Nav, Navbar, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 const Details = () => {
   const [details, setDetails] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/info")
+    fetch("https://info-app-server-r5jf6tt34-yea-sin.vercel.app/info")
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
   return (
     <Container>
-      <h2 className="my-5">Stored Details from form</h2>
+      <h2 className="my-5">Stored Details from Form</h2>
       <Row md={4}>
         {details.map((data) => (
           <Col key={data._id}>

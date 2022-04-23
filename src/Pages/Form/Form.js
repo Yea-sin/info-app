@@ -19,21 +19,29 @@ const Form = () => {
     const country = countryRef.current.value;
     const newInfo = { firstName, lastName, email, phone, jobTitle, country };
     console.log(newInfo);
-    axios.post("http://localhost:5000/info", newInfo).then((data) => {
-      if (data.status === 200) {
-        alert("Submitted Successfully");
-        e.target.reset();
-      } else {
-        alert("there was an error");
-      }
-    });
+    axios
+      .post(
+        "https://info-app-server-r5jf6tt34-yea-sin.vercel.app/info",
+        newInfo
+      )
+      .then((data) => {
+        if (data.status === 200) {
+          alert("Submitted Successfully");
+          e.target.reset();
+        } else {
+          alert("there was an error");
+        }
+      });
     e.preventDefault();
   };
   return (
     <Container className="my-5">
-      <h2 className="my-5">Please provide contact details</h2>
-      <div className="form-container">
-        <form onSubmit={handleForm} className="row row-cols-2 g-5">
+      <h2 className="my-5 text-secondary">Please provide contact details</h2>
+      <div className="form-container ">
+        <form
+          onSubmit={handleForm}
+          className="row row-cols-2 g-5 shadow-lg p-4"
+        >
           <input ref={firstNameRef} placeholder="First Name" type="text" />
           <input ref={lastNameRef} placeholder="Last Name" type="text" />
           <input ref={emailRef} placeholder="Email" type="text" />
