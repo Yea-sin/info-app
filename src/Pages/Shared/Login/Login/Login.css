@@ -1,0 +1,17 @@
+.form-container > form input {
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 20px 0;
+  background: none;
+}
+.form-container > form button {
+  width: 100px;
+  margin: 0 auto;
+}
+.form-container > form input:focus {
+  outline: none;
+}
+/* .form-container > form input::placeholder {
+  font-family: monospace;
+  color: white;
+} */

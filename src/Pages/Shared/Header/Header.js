@@ -18,7 +18,12 @@ const Header = () => {
                 Form
               </Nav.Link>
               <Nav.Link active as={HashLink} to="/storedDetails">
-                Stored Details
+                Stored Data
+              </Nav.Link>
+              <Nav.Link active as={HashLink} to="/login">
+                <button disabled className="btn btn-success">
+                  Login
+                </button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Pages/Shared/Header/Header";
 import Form from "./Pages/Form/Form";
 import Details from "./Pages/Details/Details";
+import Login from "./Pages/Shared/Login/Login/Login";
+import Register from "./Pages/Shared/Login/Register/Register";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/form" element={<Form />} />
           <Route path="/storedDetails" element={<Details />} />
+          <Route path="/login" element={<Login />} />
+          {/* <Route path="/singup" element={<Register />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
